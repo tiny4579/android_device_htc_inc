@@ -1,4 +1,4 @@
-CM10.1 for the Droid Incredible
+CM10 for the Droid Incredible
 
 ## Info
 [**XDA Discussion thread**](http://forum.xda-developers.com/showthread.php?t=1882918)
@@ -13,12 +13,13 @@ mkdir ~/bin
 cd ~/android/cm10/
 curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > ~/bin/repo
 chmod a+x ~/bin/repo
-repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
+repo init -u git://github.com/CyanogenMod/android.git -b jellybean
 ```
 
 ### Finish setting up repo
 ```bash
-wget -O .repo/local_manifest/local_manifest.xml https://raw.github.com/tiny4579/android_device_htc_inc/cm-10.1/Manifest/local_manifest.xml
+mkdir ~/cm10/.repo/local_manifests
+wget -O ~/cm10/.repo/local_manifests https://raw.github.com/PonsAsinorem/android_device_htc_inc/cm-10.1/Manifest/local_manifest.xml
 ```
 
 ### Download the source

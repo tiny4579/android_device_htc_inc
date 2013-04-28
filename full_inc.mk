@@ -114,9 +114,8 @@ PRODUCT_PACKAGES += \
 
 # USB
 ADDITIONAL_DEFAULT_PROPERTIES += \
-    persist.sys.usb.config=mass_storage,mtp \
-    persist.service.adb.enable=1 \
-    ro.adb.secure=0
+    persist.sys.usb.config=mass_storage \
+    persist.service.adb.enable=1
 
 # Init post-boot script
 PRODUCT_COPY_FILES += \
@@ -147,12 +146,12 @@ PRODUCT_VERSION_MINOR := 1
 
 # Goo Manager support
 ifneq ($(CM_BUILDTYPE),UNOFFICIAL)
-    CM_BUILDTYPE := TINY
+    CM_BUILDTYPE := PONS
     CM_VERSION := $(PRODUCT_VERSION_MAJOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)-$(CM_BUILD)$(CM_EXTRAVERSION)
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.modversion=CyanogenMod-$(CMVERSION) \
-        ro.goo.developerid=tiny4579 \
-        ro.goo.rom=CM$(PRODUCT_VERSION_MAJOR)$(PRODUCT_VERSION_MINOR)$(CM_BUILDTYPE)$(CM_BUILD) \
+        ro.goo.developerid=PonsAsinorem \
+        ro.goo.rom=CM$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)$(CM_BUILDTYPE)$(CM_BUILD) \
         ro.goo.version=$(shell date +%s)
 
     PRODUCT_COPY_FILES +=  \
