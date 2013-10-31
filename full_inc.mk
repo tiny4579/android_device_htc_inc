@@ -144,7 +144,7 @@ CM_BUILDTYPE := UNOFFICIAL
 
 # Goo Manager support
 ifeq ($(CM_BUILDTYPE),UNOFFICIAL)
-    CM_BUILDTYPE := PONS
+    CM_BUILDTYPE := TINY
     CM_VERSION := $(PRODUCT_VERSION_MAJOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)-$(CM_BUILD)$(CM_EXTRAVERSION)
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.modversion=CyanogenMod-$(CMVERSION) \
